@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+<button id = "bbb">hi there</button>
+
+
+
+
+  <script>
+
+ var but = document.getElementById("bbb");
+
+  
+
+	function hand(){
+		console.log(this);
+	};
+
+	but.addEventListener("click", hand);
+
+
+
+  </script>
+
+
+</body>
+
+</html>
