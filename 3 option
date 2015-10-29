@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+</head>
+
+Добавьте в ваш документ элемент select, при изменении знавения которого вы будете записывать выбранные значение клиенто в массив, после того как клиент изменить хзначение select вы выведете это значение на экран и так для каждого значения, то есть у вас под селектом будет список всех значений которые клиент когда либо выбирал
+
+<body>
+
+
+
+<select id = "s">
+  <option id = "1">Пункт 1</option>
+  <option id = "2">Пункт 2</option>
+  <option id = "3">Пункт 3</option>
+  <option id = "4">Пункт 4</option>
+</select>
+
+<button id = "butt">push me</button>
+
+  <script>
+
+
+  var but = document.getElementById("butt");
+
+ 
+var arr = [];
+
+	function hand(){
+
+		var select = document.getElementById("s");
+
+
+
+for (var i = 0; i < select.options.length; i++) {
+  var option = select.options[i];
+  if(option.selected) {
+    arr.push(option.value);
+  }
+}
+}
+
+but.addEventListener("click", hand);
+
+
+  </script>
+
+
+</body>
+
+</html>
