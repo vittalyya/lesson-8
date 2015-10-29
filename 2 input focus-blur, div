@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+</head>
+
+
+
+<body>
+
+<input type= "text" id = "inp" value = "hi">
+
+
+
+  <script>
+
+ var elem = document.getElementById("inp");
+
+  
+
+	function hand(){
+		var d = document.createElement('div');
+
+		d.setAttribute("id", "loh");
+		
+	document.body.insertBefore(d, elem);
+
+	var val = elem.value;
+
+	d.innerText = val;
+
+	};
+
+	function bl(){
+	var d1 = document.getElementById("loh");
+
+	d1.remove();
+		
+	};
+
+
+
+	elem.addEventListener("focus", hand);
+
+	elem.addEventListener("blur", bl);
+
+
+
+  </script>
+
+
+</body>
+
+</html>
